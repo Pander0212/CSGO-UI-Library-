@@ -1,0 +1,50 @@
+--[[
+	Skin "Onetap" – dark anthracite, orange accent, text tab bar on top, flat group boxes,
+	clean lines, square checkboxes, flat sliders.
+]]
+local Base = require("Skins/Base")
+local W = require("Skins/Onetap/Window")
+
+return Base.Extend({
+	Name = "Onetap",
+	Description = "Top text tabs, flat groups, orange accent",
+	Theme = require("Skins/Onetap/Theme"),
+	Style = {
+		ToggleStyle = "Checkbox",
+		CheckSize = 12,
+		CheckCorner = "SmallCornerRadius",
+		CheckStroke = "BorderDark",
+		CheckMark = true,
+		CheckGap = 8,
+		ToggleLabelActive = true,
+		LabelAbove = true,
+		SliderTrack = 5,
+		SliderKnob = 0,
+		SliderValue = "Right",
+		SliderValueColor = "Accent",
+		SliderRows = 1.5,
+		TrackCorner = "SmallCornerRadius",
+		ControlCorner = "SmallCornerRadius",
+		ControlStroke = "BorderDark",
+		ControlStrokeHover = "Accent",
+		KeyStyle = "Chip",
+		SwatchW = 20,
+		SwatchH = 10,
+		SwatchCorner = "SmallCornerRadius",
+		SwatchStroke = "BorderDark",
+		ButtonStyle = "Filled",
+		ButtonStroke = "BorderDark",
+		ButtonStrokeHover = "Accent",
+		ButtonHeight = 1.25,
+		ButtonFont = "FontTitle",
+		BoxHeight = 1.1,
+		AboveOverlap = 2,
+		ListItemH = 1.1,
+		PanelStroke = "BorderDark",
+		IconBg = "Panel",
+		PopoutWidth = 240,
+	},
+	Window = W.Window,
+	Group = W.Group,
+	Loader = require("Skins/Onetap/Loader"),
+})
